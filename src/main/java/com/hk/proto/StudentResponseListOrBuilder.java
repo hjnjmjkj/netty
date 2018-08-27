@@ -10,12 +10,12 @@ public interface StudentResponseListOrBuilder extends
   /**
    * <code>repeated .com.hk.proto.StudentResponse studentResponse = 1;</code>
    */
-  java.util.List<StudentResponse>
+  java.util.List<com.hk.proto.StudentResponse> 
       getStudentResponseList();
   /**
    * <code>repeated .com.hk.proto.StudentResponse studentResponse = 1;</code>
    */
-  StudentResponse getStudentResponse(int index);
+  com.hk.proto.StudentResponse getStudentResponse(int index);
   /**
    * <code>repeated .com.hk.proto.StudentResponse studentResponse = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface StudentResponseListOrBuilder extends
   /**
    * <code>repeated .com.hk.proto.StudentResponse studentResponse = 1;</code>
    */
-  java.util.List<? extends StudentResponseOrBuilder>
+  java.util.List<? extends com.hk.proto.StudentResponseOrBuilder> 
       getStudentResponseOrBuilderList();
   /**
    * <code>repeated .com.hk.proto.StudentResponse studentResponse = 1;</code>
    */
-  StudentResponseOrBuilder getStudentResponseOrBuilder(
-          int index);
+  com.hk.proto.StudentResponseOrBuilder getStudentResponseOrBuilder(
+      int index);
 }

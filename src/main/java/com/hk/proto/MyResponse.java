@@ -19,7 +19,7 @@ private static final long serialVersionUID = 0L;
     realname_ = "";
   }
 
-  @Override
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new NullPointerException();
+      throw new java.lang.NullPointerException();
     }
     int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 18: {
-            String s = input.readStringRequireUtf8();
+            java.lang.String s = input.readStringRequireUtf8();
 
             realname_ = s;
             break;
@@ -70,29 +70,29 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return StudentProto.internal_static_com_hk_proto_MyResponse_descriptor;
+    return com.hk.proto.StudentProto.internal_static_com_hk_proto_MyResponse_descriptor;
   }
 
-  protected FieldAccessorTable
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return StudentProto.internal_static_com_hk_proto_MyResponse_fieldAccessorTable
+    return com.hk.proto.StudentProto.internal_static_com_hk_proto_MyResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            MyResponse.class, Builder.class);
+            com.hk.proto.MyResponse.class, com.hk.proto.MyResponse.Builder.class);
   }
 
   public static final int REALNAME_FIELD_NUMBER = 2;
-  private volatile Object realname_;
+  private volatile java.lang.Object realname_;
   /**
    * <code>string realname = 2;</code>
    */
-  public String getRealname() {
-    Object ref = realname_;
-    if (ref instanceof String) {
-      return (String) ref;
+  public java.lang.String getRealname() {
+    java.lang.Object ref = realname_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      String s = bs.toStringUtf8();
+      java.lang.String s = bs.toStringUtf8();
       realname_ = s;
       return s;
     }
@@ -102,11 +102,11 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.ByteString
       getRealnameBytes() {
-    Object ref = realname_;
-    if (ref instanceof String) {
+    java.lang.Object ref = realname_;
+    if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (String) ref);
+              (java.lang.String) ref);
       realname_ = b;
       return b;
     } else {
@@ -145,15 +145,15 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @Override
-  public boolean equals(final Object obj) {
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof MyResponse)) {
+    if (!(obj instanceof com.hk.proto.MyResponse)) {
       return super.equals(obj);
     }
-    MyResponse other = (MyResponse) obj;
+    com.hk.proto.MyResponse other = (com.hk.proto.MyResponse) obj;
 
     boolean result = true;
     result = result && getRealname()
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
     return result;
   }
 
-  @Override
+  @java.lang.Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -176,69 +176,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MyResponse parseFrom(byte[] data)
+  public static com.hk.proto.MyResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static MyResponse parseFrom(java.io.InputStream input)
+  public static com.hk.proto.MyResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static MyResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.hk.proto.MyResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static MyResponse parseDelimitedFrom(
+  public static com.hk.proto.MyResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static MyResponse parseFrom(
+  public static com.hk.proto.MyResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(MyResponse prototype) {
+  public static Builder newBuilder(com.hk.proto.MyResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -258,9 +258,9 @@ private static final long serialVersionUID = 0L;
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @Override
+  @java.lang.Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -270,17 +270,17 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.hk.proto.MyResponse)
-      MyResponseOrBuilder {
+      com.hk.proto.MyResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return StudentProto.internal_static_com_hk_proto_MyResponse_descriptor;
+      return com.hk.proto.StudentProto.internal_static_com_hk_proto_MyResponse_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return StudentProto.internal_static_com_hk_proto_MyResponse_fieldAccessorTable
+      return com.hk.proto.StudentProto.internal_static_com_hk_proto_MyResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              MyResponse.class, Builder.class);
+              com.hk.proto.MyResponse.class, com.hk.proto.MyResponse.Builder.class);
     }
 
     // Construct using com.hk.proto.MyResponse.newBuilder()
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -307,23 +307,23 @@ private static final long serialVersionUID = 0L;
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return StudentProto.internal_static_com_hk_proto_MyResponse_descriptor;
+      return com.hk.proto.StudentProto.internal_static_com_hk_proto_MyResponse_descriptor;
     }
 
-    public MyResponse getDefaultInstanceForType() {
-      return MyResponse.getDefaultInstance();
+    public com.hk.proto.MyResponse getDefaultInstanceForType() {
+      return com.hk.proto.MyResponse.getDefaultInstance();
     }
 
-    public MyResponse build() {
-      MyResponse result = buildPartial();
+    public com.hk.proto.MyResponse build() {
+      com.hk.proto.MyResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public MyResponse buildPartial() {
-      MyResponse result = new MyResponse(this);
+    public com.hk.proto.MyResponse buildPartial() {
+      com.hk.proto.MyResponse result = new com.hk.proto.MyResponse(this);
       result.realname_ = realname_;
       onBuilt();
       return result;
@@ -334,7 +334,7 @@ private static final long serialVersionUID = 0L;
     }
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return (Builder) super.setField(field, value);
     }
     public Builder clearField(
@@ -347,25 +347,25 @@ private static final long serialVersionUID = 0L;
     }
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, Object value) {
+        int index, java.lang.Object value) {
       return (Builder) super.setRepeatedField(field, index, value);
     }
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        Object value) {
+        java.lang.Object value) {
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof MyResponse) {
-        return mergeFrom((MyResponse)other);
+      if (other instanceof com.hk.proto.MyResponse) {
+        return mergeFrom((com.hk.proto.MyResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(MyResponse other) {
-      if (other == MyResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.hk.proto.MyResponse other) {
+      if (other == com.hk.proto.MyResponse.getDefaultInstance()) return this;
       if (!other.getRealname().isEmpty()) {
         realname_ = other.realname_;
         onChanged();
@@ -383,11 +383,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      MyResponse parsedMessage = null;
+      com.hk.proto.MyResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (MyResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.hk.proto.MyResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -397,20 +397,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private Object realname_ = "";
+    private java.lang.Object realname_ = "";
     /**
      * <code>string realname = 2;</code>
      */
-    public String getRealname() {
-      Object ref = realname_;
-      if (!(ref instanceof String)) {
+    public java.lang.String getRealname() {
+      java.lang.Object ref = realname_;
+      if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         realname_ = s;
         return s;
       } else {
-        return (String) ref;
+        return (java.lang.String) ref;
       }
     }
     /**
@@ -418,11 +418,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getRealnameBytes() {
-      Object ref = realname_;
+      java.lang.Object ref = realname_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         realname_ = b;
         return b;
       } else {
@@ -433,7 +433,7 @@ private static final long serialVersionUID = 0L;
      * <code>string realname = 2;</code>
      */
     public Builder setRealname(
-        String value) {
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -480,12 +480,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:com.hk.proto.MyResponse)
-  private static final MyResponse DEFAULT_INSTANCE;
+  private static final com.hk.proto.MyResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new MyResponse();
+    DEFAULT_INSTANCE = new com.hk.proto.MyResponse();
   }
 
-  public static MyResponse getDefaultInstance() {
+  public static com.hk.proto.MyResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -503,12 +503,12 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @Override
+  @java.lang.Override
   public com.google.protobuf.Parser<MyResponse> getParserForType() {
     return PARSER;
   }
 
-  public MyResponse getDefaultInstanceForType() {
+  public com.hk.proto.MyResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
