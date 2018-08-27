@@ -4,6 +4,8 @@ import com.hk.proto.*;
 import com.hk.proto.StudentServiceGrpc.StudentServiceImplBase;
 import io.grpc.stub.StreamObserver;
 
+import java.util.UUID;
+
 public class StudentServiceImpl extends StudentServiceImplBase {
     @Override
     public void getRealNameByUsername(MyRequest request, StreamObserver<MyResponse> responseObserver) {
@@ -22,5 +24,54 @@ public class StudentServiceImpl extends StudentServiceImplBase {
         responseObserver.onNext(StudentResponse.newBuilder().setName("王五").setAge(20).setCity("广州").build());
         responseObserver.onNext(StudentResponse.newBuilder().setName("赵六").setAge(20).setCity("深圳").build());
         responseObserver.onCompleted();
+    }
+
+    @Override
+    public StreamObserver<StudentRequest> getStudentsWrapperByAges(StreamObserver<StudentResponseList> responseObserver) {
+        return new StreamObserver<StudentRequest>() {
+            @Override
+            public void onNext(StudentRequest value) {
+                System.out.println("onNext:"+value.getAge());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+                StudentResponse studentResponse = StudentResponse.newBuilder().setName("张三").setAge(20).setCity("北京").build();
+                StudentResponse studentResponse2 = StudentResponse.newBuilder().setName("李四").setAge(20).setCity("上海").build();
+                StudentResponseList studentResponseList = StudentResponseList.newBuilder()
+                        .addStudentResponse(studentResponse)
+                        .addStudentResponse(studentResponse).build();
+                responseObserver.onNext(studentResponseList);
+                responseObserver.onCompleted();
+            }
+        };
+
+    }
+
+    @Override
+    public StreamObserver<StreamRequest> biTalk(StreamObserver<StreamResponse> responseObserver) {
+        return new StreamObserver<StreamRequest>() {
+
+            @Override
+            public void onNext(StreamRequest value) {
+                System.out.println(value.getRequestInfo());
+                responseObserver.onNext(StreamResponse.newBuilder().setResponseInfo(UUID.randomUUID().toString()).build());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                System.out.println(t.getMessage());
+            }
+
+            @Override
+            public void onCompleted() {
+                responseObserver.onCompleted();
+            }
+        };
     }
 }

@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:com.hk.proto.StudentResponseList)
-      com.hk.proto.StudentResponseListOrBuilder {
+      StudentResponseListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return StudentProto.internal_static_com_hk_proto_StudentResponseList_descriptor;

@@ -39,6 +39,16 @@ public final class StudentProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_hk_proto_StudentResponseList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_hk_proto_StreamRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_hk_proto_StreamRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_hk_proto_StreamResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_hk_proto_StreamResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -54,15 +64,19 @@ public final class StudentProto {
       "\001(\005\":\n\017StudentResponse\022\014\n\004name\030\001 \001(\t\022\013\n\003" +
       "age\030\002 \001(\005\022\014\n\004city\030\003 \001(\t\"M\n\023StudentRespon" +
       "seList\0226\n\017studentResponse\030\001 \003(\0132\035.com.hk" +
-      ".proto.StudentResponse2\224\002\n\016StudentServic" +
+      ".proto.StudentResponse\"%\n\rStreamRequest\022" +
+      "\024\n\014request_info\030\001 \001(\t\"\'\n\016StreamResponse\022" +
+      "\025\n\rresponse_info\030\001 \001(\t2\337\002\n\016StudentServic" +
       "e\022L\n\025GetRealNameByUsername\022\027.com.hk.prot" +
       "o.MyRequest\032\030.com.hk.proto.MyResponse\"\000\022" +
       "S\n\020GetStudentsByAge\022\034.com.hk.proto.Stude" +
       "ntRequest\032\035.com.hk.proto.StudentResponse" +
       "\"\0000\001\022_\n\030GetStudentsWrapperByAges\022\034.com.h" +
       "k.proto.StudentRequest\032!.com.hk.proto.St" +
-      "udentResponseList\"\000(\001B\036\n\014com.hk.protoB\014S" +
-      "tudentProtoP\001b\006proto3"
+      "udentResponseList\"\000(\001\022I\n\006BiTalk\022\033.com.hk" +
+      ".proto.StreamRequest\032\034.com.hk.proto.Stre" +
+      "amResponse\"\000(\0010\001B\036\n\014com.hk.protoB\014Studen" +
+      "tProtoP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -106,6 +120,18 @@ public final class StudentProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_hk_proto_StudentResponseList_descriptor,
         new String[] { "StudentResponse", });
+    internal_static_com_hk_proto_StreamRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_hk_proto_StreamRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_hk_proto_StreamRequest_descriptor,
+        new String[] { "RequestInfo", });
+    internal_static_com_hk_proto_StreamResponse_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_hk_proto_StreamResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_hk_proto_StreamResponse_descriptor,
+        new String[] { "ResponseInfo", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
