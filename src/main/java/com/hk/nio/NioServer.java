@@ -67,27 +67,12 @@ public class NioServer {
                                     value.write(writeBuffer);
                                 }
 
+                            }else{
+                                close(client);
                             }
                         }
                     }catch (Exception ex){
-                        Iterator<String> iter = clientMap.keySet().iterator();
-
-                        while(iter.hasNext()) {
-
-                            String key = iter.next();
-
-                            if(clientMap.get(key)==client){
-                                iter.remove();
-                            }
-
-                        }
-                        System.out.println("client是否连接："+client.isConnected());
-                        System.out.println("client是否注册："+client.isRegistered());
-                        try {
-                            client.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        close(client);
                         ex.printStackTrace();
                     }
                 });
@@ -100,5 +85,26 @@ public class NioServer {
         }
 
 
+    }
+
+    private static void close(SocketChannel client) {
+        Iterator<String> iter = clientMap.keySet().iterator();
+
+        while(iter.hasNext()) {
+
+            String key = iter.next();
+
+            if(clientMap.get(key)==client){
+                iter.remove();
+            }
+
+        }
+        System.out.println("client是否连接："+client.isConnected());
+        System.out.println("client是否注册："+client.isRegistered());
+        try {
+            client.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
