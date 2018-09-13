@@ -9,10 +9,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 public class NioServer {
     private static Map<String,SocketChannel> clientMap=new HashMap<>();
@@ -32,7 +29,7 @@ public class NioServer {
                 selector.select();
                 Set<SelectionKey> selectionKeys =selector.selectedKeys();
                 selectionKeys.forEach(selectionKey -> {
-                    final SocketChannel client;
+                    SocketChannel client=null;
                     try{
                         if(selectionKey.isAcceptable()){
                             ServerSocketChannel server= (ServerSocketChannel) selectionKey.channel();
@@ -67,13 +64,15 @@ public class NioServer {
                                     ByteBuffer writeBuffer =ByteBuffer.allocate(1024);
                                     writeBuffer.put((senderKey+":"+receiveMessage).getBytes("GBK"));
                                     writeBuffer.flip();
-
                                     value.write(writeBuffer);
                                 }
 
+                            }else{
+                                close(client);
                             }
                         }
                     }catch (Exception ex){
+                        close(client);
                         ex.printStackTrace();
                     }
                 });
@@ -81,10 +80,31 @@ public class NioServer {
 
 
             }catch (Exception ex){
-
+                ex.printStackTrace();
             }
         }
 
 
+    }
+
+    private static void close(SocketChannel client) {
+        Iterator<String> iter = clientMap.keySet().iterator();
+
+        while(iter.hasNext()) {
+
+            String key = iter.next();
+
+            if(clientMap.get(key)==client){
+                iter.remove();
+            }
+
+        }
+        System.out.println("client是否连接："+client.isConnected());
+        System.out.println("client是否注册："+client.isRegistered());
+        try {
+            client.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
