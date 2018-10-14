@@ -27,6 +27,8 @@ public class NewIOServer {
                     readCount=socketChannel.read(byteBuffer);
                 }catch (Exception ex){
                     ex.printStackTrace();
+                    socketChannel.close();
+                    break;
                 }
                 byteBuffer.rewind();
             }
